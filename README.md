@@ -10,7 +10,7 @@ I finished my first half-marathon within 3 hours in 2019. It was a dreadful expe
 Runkeeper records a wide range of information describing user's activities, route, distance, duration, average pace, average speed, calories burned and average heart rate. An amazing key feature of Runkeeper is its excellent data export. User is allowed to download her/his data from the personal profile section.
 
 
-**Methods**
+**Methods:**
 1. Obtain and review raw data
 2. Data preprocessing
 3. Dealing with missing values
