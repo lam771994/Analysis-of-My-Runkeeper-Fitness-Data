@@ -2,7 +2,7 @@
 
 **Motivation:**
 
-I finished my first half-marathon within 3 hours in 2019. It was a dreadful experience yet extremely rewarding. I did not train nor prepare myself for the marathon as it was a spontaneous decision, but I still managed to complete the 21km journey. Aside from the determination,'NEVER GIVE UP' and 'don't want to lose face' spirit, I had to thank my 'once in a while' cardio activities (i.e. Running and Walking). Since 2014, I have been using a popular app called Runkeeper. It is an excellent app that keeps track of your runs, goals and improvements. I would like to humbly present the analysis of my Runkeeper Fitness data.
+I finished my first half-marathon within 3 hours in 2019. It was a dreadful experience yet extremely rewarding. I did not train nor prepare myself for the marathon as it was a spontaneous decision, but I still managed to complete the 21km journey. Aside from the determination, 'NEVER GIVE UP' and 'don't want to lose face' spirit, I had to thank my 'once in a while' cardio activities (i.e. Running and Walking). Since 2014, I have been using a popular app called Runkeeper. It is an excellent app that keeps track of your runs, goals and improvements. I would like to humbly present the analysis of my Runkeeper Fitness data.
 
 
 **Dataset:**  
