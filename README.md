@@ -7,14 +7,11 @@ I finished my first half-marathon within 3 hours in 2019. It was a dreadful expe
 
 [![IMG-1575.jpg](https://i.postimg.cc/Njfym45D/IMG-1575.jpg)](https://postimg.cc/ZC2Kh6Pv)
 
-
-
-
-
+<pre>
 :bar_chart: **Dataset:**  
 
 Runkeeper records a wide range of information describing user's activities, route, distance, duration, average pace, average speed, calories burned and average heart rate. An amazing key feature of Runkeeper is its excellent data export. User is allowed to download her/his data from the personal profile section.
-
+</pre>
 
 
 
