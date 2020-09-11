@@ -27,7 +27,12 @@ Runkeeper records a wide range of information describing user's activities, rout
 **Analysis**
 1. Obtain and review raw data
 
-//
+```
+import pandas as pd
+
+#Name the dataset file and create a dataframe
+runkeeper = pd.read_csv('/Users/lamyingxian/Dropbox/Data Science Course/Projects/My Cardio Activities - Runkeeper/cardioActivities.csv')
+```
 
 
 
