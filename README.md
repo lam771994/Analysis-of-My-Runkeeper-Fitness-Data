@@ -10,9 +10,11 @@ I finished my first half-marathon within 3 hours in 2019. It was a dreadful expe
 
 
 
+
 :bar_chart: **Dataset:**  
 
 Runkeeper records a wide range of information describing user's activities, route, distance, duration, average pace, average speed, calories burned and average heart rate. An amazing key feature of Runkeeper is its excellent data export. User is allowed to download her/his data from the personal profile section.
+
 
 
 
@@ -28,6 +30,7 @@ Runkeeper records a wide range of information describing user's activities, rout
 8. Am I progressing?
 9. Training intensity
 10. Detailed summary report
+
 
 
 
@@ -60,8 +63,11 @@ runkeeper.info()
 ```
 [![Screenshot-2020-09-11-at-2-14-43-PM.png](https://i.postimg.cc/zGMBs1Gb/Screenshot-2020-09-11-at-2-14-43-PM.png)](https://postimg.cc/xXvnmhHn)
 
+
 :point_right: There are 234 data and 14 columns of data.
-:point_right: 'Non-Null Count' means number of items in the specific column that are not null.
+
+:point_right: 'Non-Null Count' means number of items in the specific column that are not zero/empty.
+
 :point_right: 'Dtype' means the data types.
               Object: text or mixed numeric and non-numeric values.
               float64: decimal numbers.
