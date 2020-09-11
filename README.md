@@ -4,7 +4,8 @@
 
 I finished my first half-marathon within 3 hours in 2019. It was a dreadful experience yet extremely rewarding. I did not train nor prepare myself for the marathon as it was a spontaneous decision, but I still managed to complete the 21km journey. Aside from the determination, 'NEVER GIVE UP' and 'don't want to lose face' spirit, I had to thank my 'once in a while' cardio activities (i.e. Running and Walking). Since 2014, I have been using a popular app called Runkeeper. It is an excellent app that keeps track of your runs, goals and improvements. In this project, I would like to humbly present the analysis of my Runkeeper Fitness data.
 
-[![IMG-1575.jpg](https://i.postimg.cc/cLDnbYfh/IMG-1575.jpg)](https://postimg.cc/9D704D8w)
+[![IMG-1575.jpg](https://i.postimg.cc/Njfym45D/IMG-1575.jpg)](https://postimg.cc/ZC2Kh6Pv)
+
 
 **Dataset:**  
 
@@ -24,7 +25,7 @@ Runkeeper records a wide range of information describing user's activities, rout
 10. Detailed summary report
 
 
-**Analysis**
+**Analysis:**
 1. Obtain and review raw data
 
 ```
@@ -37,6 +38,6 @@ runkeeper = pd.read_csv('/Users/lamyingxian/Dropbox/Data Science Course/Projects
 from IPython.display import display
 display(runkeeper.sample(5))
 ```
-[![Screenshot-2020-09-11-at-1-01-38-PM.png](https://i.postimg.cc/26PvxBP6/Screenshot-2020-09-11-at-1-01-38-PM.png)](https://postimg.cc/wyQ7q3x8)
+[![Screenshot-2020-09-11-at-1-01-38-PM.png](https://i.postimg.cc/Xq4N3j5L/Screenshot-2020-09-11-at-1-01-38-PM.png)](https://postimg.cc/N9Cvkwp2)
 
 
