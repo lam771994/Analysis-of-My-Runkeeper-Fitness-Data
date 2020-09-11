@@ -32,7 +32,11 @@ import pandas as pd
 
 #Name the dataset file and create a dataframe
 runkeeper = pd.read_csv('/Users/lamyingxian/Dropbox/Data Science Course/Projects/My Cardio Activities - Runkeeper/cardioActivities.csv')
-```
 
+#Brief look at the data
+from IPython.display import display
+display(runkeeper.sample(5))
+```
+[![Screenshot-2020-09-11-at-1-01-38-PM.png](https://i.postimg.cc/26PvxBP6/Screenshot-2020-09-11-at-1-01-38-PM.png)](https://postimg.cc/wyQ7q3x8)
 
 
