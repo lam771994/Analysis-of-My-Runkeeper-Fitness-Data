@@ -35,9 +35,12 @@ import pandas as pd
 runkeeper = pd.read_csv('/Users/lamyingxian/Dropbox/Data Science Course/Projects/My Cardio Activities - Runkeeper/cardioActivities.csv')
 
 #Brief look at the data
-from IPython.display import display
-display(runkeeper.sample(5))
+runkeeper.head()
 ```
+[![Screenshot-2020-09-11-at-2-10-39-PM.png](https://i.postimg.cc/vTpf86Q9/Screenshot-2020-09-11-at-2-10-39-PM.png)](https://postimg.cc/1VrfJXV5)
+
+*Since the console is not able to show all the 14 columns due to its limited space, I prefer to briefly look at the data in variable explorer.
+
 [![Screenshot-2020-09-11-at-1-01-38-PM.png](https://i.postimg.cc/Xq4N3j5L/Screenshot-2020-09-11-at-1-01-38-PM.png)](https://postimg.cc/N9Cvkwp2)
 
 
