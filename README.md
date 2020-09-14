@@ -56,16 +56,16 @@ runkeeper.head()
 #Summary of the data
 runkeeper.info()
 ```
-[![Screenshot-2020-09-14-at-3-09-21-PM.png](https://i.postimg.cc/0jf2gdfg/Screenshot-2020-09-14-at-3-09-21-PM.png)](https://postimg.cc/QKFr17wS)\\
+[![Screenshot-2020-09-14-at-3-09-21-PM.png](https://i.postimg.cc/0jf2gdfg/Screenshot-2020-09-14-at-3-09-21-PM.png)](https://postimg.cc/QKFr17wS)\
 
-:point_right: There are 234 data and 14 columns of data.
+:point_right: There are 234 data and 13 columns of data.
 
 :point_right: 'Non-Null Count' means number of items in the specific column that are not zero/empty. If you look close enough, there are some missing values in 'Distance'. It will be explored deeper in Data Preprocessing
 
 :point_right: 'Dtype' means the data types; 
               Object: text or mixed numeric and non-numeric values; 
               float64: decimal numbers; 
-              int64: real numbers.
+              int64: real numbers.\
               
 
 
