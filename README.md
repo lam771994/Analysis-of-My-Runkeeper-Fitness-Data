@@ -197,6 +197,7 @@ weekly_average = runs_subset_2014_2020.resample('W').mean().mean()
 weekly_counts_average = runs_subset_2014_2020['Distance (km)'].resample('W').count().mean()
 weekly_counts_average
 ```
+
 [![Screenshot-2020-09-14-at-3-52-35-PM.png](https://i.postimg.cc/VNW7B6BN/Screenshot-2020-09-14-at-3-52-35-PM.png)](https://postimg.cc/WDt6ssyR)
 
 :point_right: There are null numbers in 2018 because there was no activities going on.
