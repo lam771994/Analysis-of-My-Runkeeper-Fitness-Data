@@ -45,19 +45,18 @@ runkeeper = pd.read_csv('/Users/lamyingxian/Dropbox/Data Science Course/Projects
 #Brief look at the data
 runkeeper.head()
 ```
-[![Screenshot-2020-09-14-at-3-06-03-PM.png](https://i.postimg.cc/CKPG0kcq/Screenshot-2020-09-14-at-3-06-03-PM.png)](https://postimg.cc/zLhbSbZz)
+
 
 :point_right: Since the console is not able to show all the 14 columns due to its limited space, I prefer to briefly look at the data in variable explorer.
 
-[![Screenshot-2020-09-11-at-1-01-38-PM.png](https://i.postimg.cc/Xq4N3j5L/Screenshot-2020-09-11-at-1-01-38-PM.png)](https://postimg.cc/N9Cvkwp2)
-
+[![Screenshot-2020-09-14-at-3-08-47-PM.png](https://i.postimg.cc/WzPhc4cZ/Screenshot-2020-09-14-at-3-08-47-PM.png)](https://postimg.cc/2b2z4r6j)
 
 
 ```
 #Summary of the data
 runkeeper.info()
 ```
-[![Screenshot-2020-09-11-at-3-31-32-PM.png](https://i.postimg.cc/8PS8KkQX/Screenshot-2020-09-11-at-3-31-32-PM.png)](https://postimg.cc/ThCHh6Pn)
+[![Screenshot-2020-09-14-at-3-09-21-PM.png](https://i.postimg.cc/0jf2gdfg/Screenshot-2020-09-14-at-3-09-21-PM.png)](https://postimg.cc/QKFr17wS)\\
 
 :point_right: There are 234 data and 14 columns of data.
 
