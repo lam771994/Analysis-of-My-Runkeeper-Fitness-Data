@@ -23,10 +23,10 @@ Runkeeper records a wide range of information describing user's activities, rout
 3. Dealing with missing values
 4. Ploting running data
 5. Running statistics
-7. Did I reach my goal?
-8. Am I progressing?
-9. Training intensity
-10. Detailed summary report
+6. Did I reach my goal?
+7. Am I progressing?
+8. Detailed summary report
+9. Conclusion
 
 
 
@@ -34,7 +34,7 @@ Runkeeper records a wide range of information describing user's activities, rout
 :chart_with_upwards_trend: **Analysis:**
 
 
-1. Obtain and review raw data
+*1. Obtain and review raw data*
 
 ```
 import pandas as pd
@@ -70,7 +70,7 @@ runkeeper.info()
 
 
 
-2. Data Preprocessing
+*2. Data Preprocessing*
 
 
 ```
@@ -85,15 +85,14 @@ runkeeper.drop(col_deleted,axis=1,inplace=True)
 #Check the columns to ensure the unnecessary columns are deleted
 runkeeper.columns
 ```
-[![Screenshot-2020-09-11-at-3-37-21-PM.png](https://i.postimg.cc/3RQMs30w/Screenshot-2020-09-11-at-3-37-21-PM.png)](https://postimg.cc/Z9HD3tck)
-
+[![Screenshot-2020-09-14-at-3-20-59-PM.png](https://i.postimg.cc/gjRtrN75/Screenshot-2020-09-14-at-3-20-59-PM.png)](https://postimg.cc/N2skz7B7)
 
 
 ```
 Count types of training activities
 runkeeper['Type'].value_counts()
 ```
-[![Screenshot-2020-09-11-at-3-38-41-PM.png](https://i.postimg.cc/VLpKGDCf/Screenshot-2020-09-11-at-3-38-41-PM.png)](https://postimg.cc/RN11q1dy)
+[![Screenshot-2020-09-14-at-3-21-37-PM.png](https://i.postimg.cc/MK9VVy8r/Screenshot-2020-09-14-at-3-21-37-PM.png)](https://postimg.cc/nCQXt9rv)
 
 
 
@@ -101,19 +100,120 @@ runkeeper['Type'].value_counts()
 #Check any missing values 
 runkeeper.isnull().sum()
 ```
-[![Screenshot-2020-09-11-at-3-39-33-PM.png](https://i.postimg.cc/gJjRPbCf/Screenshot-2020-09-11-at-3-39-33-PM.png)](https://postimg.cc/7GvbgdYV)
+[![Screenshot-2020-09-14-at-3-21-47-PM.png](https://i.postimg.cc/sXChsmp1/Screenshot-2020-09-14-at-3-21-47-PM.png)](https://postimg.cc/sBKXJpHR)
 
 :point_right: There are 20 missing values in the column of 'Distance'. It is mostly because the GPS was not able to detect the location so the distance could not be captured.
 
 
 
 
-3. Dealing with missing values
+*3. Dealing with missing values*
 
 As you can see from the last ouput, there are 20 missing values in the column of 'Distance'. 
-I cannot go back in time to get those data but I can fill in the missing values with an average value. This process is called *median imputation*. I choose median because mean is very sensitive to outliers, thus it is more accurate to use median in this case. 
+I cannot go back in time to get those data but I can fill in the missing values with an average value. This process is called *median imputation*. When imputing the median to fill in missing data, I need to consider that the distance varies for different activities (e.g., walking vs. running). I will filter the DataFrames by activity type (Type) and calculate each activity's median distance, then fill in the missing values with those median. I choose median because mean is very sensitive to outliers, thus it is more accurate to use median in this case. 
 
 ```
+##Dealing with missing values for each training activity type (filling with median)
+median_running = runkeeper[runkeeper['Type'] == 'Running']['Distance (km)'].median()
+median_running #3.5
+runkeeper['Distance (km)'].fillna(median_running,inplace=True)
+
+median_walking = runkeeper[runkeeper['Type'] == 'Walking']['Distance (km)'].median()
+median_walking #1.62
+runkeeper['Distance (km)'].fillna(median_walking,inplace=True)
+
+median_cycling = runkeeper[runkeeper['Type'] == 'Cycling']['Distance (km)'].median()
+median_cycling #6.52
+runkeeper['Distance (km)'].fillna(median_cycling,inplace=True)
+
+#Check any missing values again
+runkeeper.isnull().sum()
+```
+
+[![Screenshot-2020-09-14-at-3-24-22-PM.png](https://i.postimg.cc/qMD6z48P/Screenshot-2020-09-14-at-3-24-22-PM.png)](https://postimg.cc/tYP4c0vk)
+
+:point_right: All missing values are cleared!
+
+
+
+
+*4. Plot Running Data*
+
+Since most of the activities in my data were 'Running' (143 to be exact), so I will focus on plotting the running metrics.
+
+A good visualization is a figure with 4 subplots, one for each running metric (each numerical column). Each subplot will have a different y - axie, which is explained in each legend. The x axis, 'Date' is hared among all subplots.
+
+```
+# Import matplotlib, set style and ignore warning
+import matplotlib.pyplot as plt
+%matplotlib inline
+import warnings
+plt.style.use('ggplot')
+warnings.filterwarnings(
+    action='ignore', module='matplotlib.figure', category=UserWarning,
+    message=('This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.')
+)
+
+# Choosing only running for analysis
+df_run = runkeeper[runkeeper['Type'] == 'Running'].copy()
+
+#Prepare data subsetiing period from 2014 to 2020
+runs_subset_2014_2020 = df_run['2019':'2014']
+
+runs_subset_2014_2020.plot(subplots=True,
+                           sharex=False,
+                           figsize=(12,16),
+                           linestyle='none',
+                           marker='o',
+                           markersize=5,
+                          )
+
+# Show plot
+plt.show()
+
+[![Running-Metric-Plot.png](https://i.postimg.cc/1t4wWXcr/Running-Metric-Plot.png)](https://postimg.cc/1nh8X9d8)
+
+
+:point_right: The plot shows that I ran more frequently between the year of 2019 and 2020.
+
+
+
+
+*5. Running Statistics*
+
+Since I have been running for the past 7 years, I would want to know my overall performance. In this part, I will use ```resample()``` to group the time series data by a sampling period and apply several methods to each sampling period (i.e. annually and weekly)
+
+```
+#Prepare data subsetiing period from 2014 to 2020
+runs_subset_2014_2020 = df_run['2020':'2014']
+
+#Calculate annual statistics (My average run in last 7 years)
+annual_average = runs_subset_2014_2020.resample('A').mean()
+
+#Calculate weekly statistics (My weekly run in last 7 years)
+weekly_average = runs_subset_2014_2020.resample('W').mean().mean()
+
+#No. of Training per week I had on average
+weekly_counts_average = runs_subset_2014_2020['Distance (km)'].resample('W').count().mean()
+weekly_counts_average
+```
+[![Screenshot-2020-09-14-at-3-52-35-PM.png](https://i.postimg.cc/VNW7B6BN/Screenshot-2020-09-14-at-3-52-35-PM.png)](https://postimg.cc/WDt6ssyR)
+
+:point_right: There are null numbers in 2018 because there was no activities going on.
+
+[![Screenshot-2020-09-14-at-3-51-32-PM.png](https://i.postimg.cc/76BmdWR8/Screenshot-2020-09-14-at-3-51-32-PM.png)](https://postimg.cc/ygZmSvBv)
+
+[![Screenshot-2020-09-14-at-3-53-51-PM.png](https://i.postimg.cc/gjXq5kR8/Screenshot-2020-09-14-at-3-53-51-PM.png)](https://postimg.cc/zHNgHNxG)
+
+
+
+
+*6. Did I reach my goal?
+
+
+
+
+
 
 
 
