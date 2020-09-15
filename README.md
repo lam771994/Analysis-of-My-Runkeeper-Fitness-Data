@@ -1,7 +1,7 @@
 # Analysis-of-My-Cardio-Activities :runner:
 
 
- ##**Motivation:** :muscle:
+ ## **Motivation:** :muscle:
 
 I finished my first half-marathon within 3 hours in 2019. It was a dreadful experience yet extremely rewarding. I did not train nor prepare myself for the marathon as it was a spontaneous decision, but I still managed to complete the 21km journey. Aside from the 'NEVER GIVE UP' spirit, I had to thank my 'once in a while' cardio activities (i.e. mainly Running and Walking). Since 2014, I have been using a popular app called Runkeeper. It is an excellent app that keeps track of your runs, goals and improvements. In this project, I would like to humbly present the analysis of my Runkeeper Fitness data and to find out whether my occassionally cardio activities had helped me to go through my first marathon.
 
