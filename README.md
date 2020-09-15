@@ -1,23 +1,24 @@
-# Analysis-of-My-Cardio-Activities :runner:
+# Analysis of My Runkeeper Fitness Data :runner:
+
 
 
  ## **Motivation:** :muscle:
 
-I finished my first half-marathon within 3 hours in 2019. It was a dreadful experience yet extremely rewarding. I did not train nor prepare myself for the marathon as it was a spontaneous decision, but I still managed to complete the 21km journey. Aside from the 'NEVER GIVE UP' spirit, I had to thank my 'once in a while' cardio activities (i.e. mainly Running and Walking). Since 2014, I have been using a popular app called Runkeeper. It is an excellent app that keeps track of your runs, goals and improvements. In this project, I would like to humbly present the analysis of my Runkeeper Fitness data and to find out whether my occassionally cardio activities had helped me to go through my first marathon.
+I finished my first half-marathon within 3 hours in 2019. It was a dreadful experience yet extremely rewarding. I did not train nor prepare myself for the marathon as it was a spontaneous decision, but I still managed to complete the 21km journey. Aside from the 'NEVER GIVE UP' spirit, I had to thank my 'once in a while' cardio activities (i.e. mainly Running and Walking). Since 2014, I have been using a popular app called Runkeeper. It is an excellent app that keeps track of your runs, goals and improvements. In this project, I would like to humbly present the analysis of my Runkeeper Fitness data and to provide an overview performance of my outdoor cardio activities.
 
 [![IMG-1575.jpg](https://i.postimg.cc/Njfym45D/IMG-1575.jpg)](https://postimg.cc/ZC2Kh6Pv)
 
 
 
 
-:bar_chart: **Dataset:**  
+## **Dataset:** :bar_chart: 
 
 Runkeeper records a wide range of information describing user's activities, route, distance, duration, average pace, average speed, calories burned and average heart rate. An amazing key feature of Runkeeper is its excellent data export. User is allowed to download her/his data from the personal profile section.
 
 
 
 
-:page_facing_up: **Methods:**
+## **Methods:** :page_facing_up:
 1. Obtain and review raw data
 2. Data preprocessing
 3. Dealing with missing values
@@ -31,10 +32,10 @@ Runkeeper records a wide range of information describing user's activities, rout
 
 
 
-:chart_with_upwards_trend: **Analysis:**
+## **Analysis:** :chart_with_upwards_trend:
 
 
-*1. Obtain and review raw data*
+### *1. Obtain and review raw data*
 
 ```
 import pandas as pd
@@ -70,7 +71,7 @@ runkeeper.info()
 
 
 
-*2. Data Preprocessing*
+### *2. Data Preprocessing*
 
 
 ```
@@ -107,7 +108,7 @@ runkeeper.isnull().sum()
 
 
 
-*3. Dealing with missing values*
+### *3. Dealing with missing values*
 
 As you can see from the last ouput, there are 20 missing values in the column of 'Distance'. 
 I cannot go back in time to get those data but I can fill in the missing values with an average value. This process is called *median imputation*. When imputing the median to fill in missing data, I need to consider that the distance varies for different activities (e.g., walking vs. running). I will filter the DataFrames by activity type (Type) and calculate each activity's median distance, then fill in the missing values with those median. I choose median because mean is very sensitive to outliers, thus it is more accurate to use median in this case. 
@@ -137,7 +138,7 @@ runkeeper.isnull().sum()
 
 
 
-*4. Plot Running Data*
+### *4. Plot Running Data*
 
 Since most of the activities in my data were 'Running' (143 to be exact), so I will focus on plotting the running metrics.
 
@@ -170,6 +171,7 @@ runs_subset_2014_2020.plot(subplots=True,
 
 # Show plot
 plt.show()
+```
 
 [![Running-Metric-Plot.png](https://i.postimg.cc/1t4wWXcr/Running-Metric-Plot.png)](https://postimg.cc/1nh8X9d8)
 
@@ -178,8 +180,7 @@ plt.show()
 
 
 
-
-*5. Running Statistics*
+### *5. Running Statistics*
 
 Since I have been running for the past 7 years, I would want to know my overall performance. In this part, I will use ```resample()``` to group the time series data by a sampling period and apply several methods to each sampling period (i.e. annually and weekly)
 
@@ -209,7 +210,7 @@ weekly_counts_average
 
 
 
-*6. Did I reach my goal?
+### *6. Did I reach my goal?
 
 
 
