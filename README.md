@@ -19,7 +19,7 @@ Runkeeper records a wide range of information describing user's activities, rout
 
 
 ## **Methods:** :page_facing_up:
-1. Obtain and review raw data
+1. [Obtain and review raw data] (###1. Obtain and review raw data)
 2. Data preprocessing
 3. Dealing with missing values
 4. Ploting running data
