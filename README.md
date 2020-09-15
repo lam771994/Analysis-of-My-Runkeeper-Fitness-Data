@@ -351,6 +351,11 @@ Based on the analysis of my Runkeeper Fitness data, I was very inactive in runni
 
 
 
+
+This project is inspired by https://projects.datacamp.com/projects/727
+
+
+
               
 
 
