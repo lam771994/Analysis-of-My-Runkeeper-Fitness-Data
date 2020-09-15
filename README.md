@@ -19,7 +19,7 @@
 <a name="mot"></a>
  ## **Motivation:** :muscle:
 
-I finished my first half-marathon within 3 hours in 2019. It was a dreadful experience yet extremely rewarding. I did not train nor prepare myself for the marathon as it was a spontaneous decision, but I still managed to complete the 21km journey. Aside from the 'NEVER GIVE UP' spirit, I might have to thank my 'once in a while' cardio activities (i.e. mainly Running and Walking). Since 2014, I have been using a popular app called Runkeeper. It is an excellent app that keeps track of your runs, goals and improvements. In this project, I would like to humbly present the analysis of my Runkeeper Fitness data and to provide an overview performance of my outdoor cardio activities. An unexpected insight will also be provided.
+I finished my first half-marathon within 3 hours in 2019. It was a dreadful experience yet extremely rewarding. I did not train nor prepare myself for the marathon as it was a spontaneous decision, but I still managed to complete the 21km journey. Aside from the 'NEVER GIVE UP' spirit, I might have to thank my 'once in a while' outdoor cardio activities (i.e. mainly Running and Walking). Since 2014, I have been using a popular app called Runkeeper whenever I exercise outdoor. It is an excellent app that keeps track of your runs, goals and improvements. In this project, I would like to humbly present the analysis of my Runkeeper Fitness data and to provide an overview performance of my outdoor cardio activities. An unexpected insight will also be provided.
 
 [![IMG-1575.jpg](https://i.postimg.cc/Njfym45D/IMG-1575.jpg)](https://postimg.cc/ZC2Kh6Pv)
 
@@ -342,7 +342,7 @@ df_summary_total = df_summary.stack()
 
 ### *9. Conclusion*
 
-Based on my analysis of my Runkeeper Fitness data, I was very inactive in running before 2019 so it is reasonable to conclude that I was able to finish my first marathon mainly because of my strength that was built up in the gym but I did not have the stamina. However, I discovered an insight from my data which was the increased progression of my running after the marathon. 
+Based on the analysis of my Runkeeper Fitness data, I was very inactive in running outdoor before 2019 so it is reasonable to conclude that I was able to finish my first marathon mainly because of my strength that was built in the gym. Additionally, I discovered an insight from my data which was the increased progression of my running after the marathon. To think of it, the insight makes sense to me because my first marathon was memorable and life-changing. It taught me the lesson of determination and patience. Ever since then, whenever I feel demotivated, I will go out of my house and run as to remind myself that 'life is like a marathon'.
 
 
 
