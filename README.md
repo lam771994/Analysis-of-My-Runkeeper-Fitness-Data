@@ -1,10 +1,10 @@
 # Analysis of My Runkeeper Fitness Data :runner:
 
 ## Table of Content:
-1. [ Motivation. ](#mot)
-2. [ Dataset. ](#dat)
-3. [ Methods. ](#met)
-4. [ Analysis. ](#ana)
+1. [ Motivation ](#mot)
+2. [ Dataset ](#dat)
+3. [ Methods ](#met)
+4. [ Analysis ](#ana)
    - [Obtain and review raw data](#ob)
    - [Data Preprocessing](#pre)
    - [Dealing with missing values](#miss)
